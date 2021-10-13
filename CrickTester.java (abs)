@@ -1,0 +1,8 @@
+class CrickTester {
+public static void main(String[] args){
+crick cri = new crick();
+
+cri.getEntertain();
+cri.getName();
+}
+}
