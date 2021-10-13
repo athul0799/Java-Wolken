@@ -1,0 +1,7 @@
+abstract class games {
+
+abstract void getEntertain();
+
+
+abstract void getName();
+}
