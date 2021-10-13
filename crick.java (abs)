@@ -1,0 +1,12 @@
+class crick extends games {
+
+@Override
+void getEntertain(){
+System.out.println("Games are entertaining");
+}
+
+@Override
+void getName(){
+System.out.println("Name is cricket");
+}
+}
