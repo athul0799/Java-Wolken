@@ -101,9 +101,9 @@ package jdbc;
 			try {
 				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc", "root", "athul123");
 				statement = connection.prepareStatement("select * from market_details");
-				ResultSet rs = statement.executeQuery();
-				while(rs.next()) {
-					System.out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getInt(4));
+				ResultSet result = statement.executeQuery();
+				while(result.next()) {
+					System.out.println(result.getInt(1)+result.getString(2)+result.getString(3)+result.getInt(4));
 				}
 			} catch (SQLException e) {
 				System.err.println(e.getMessage());
