@@ -13,7 +13,7 @@ public static void main(String[] args )
         configuration.configure("hibernate.cfg.xml");
         SessionFactory factory = config.buildSessionFactory();
         Session session = factory.openSession();
-    	ButterDetails details = (ButterDetails)session.get(ButterflyDetails.class, 1);
+    	ButterDetails details = (ButterDetails)session.get(ButterDetails.class, 1);
     	System.out.println(details);
     	session.close();
     	factory.close();
