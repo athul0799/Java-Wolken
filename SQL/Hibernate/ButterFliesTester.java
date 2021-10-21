@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.wolken.butterflies.entity.ButterflyDetails;
+import com.wolken.butterflies.entity.ButterDetails;
 public class ButterfliesTester 
 {
 public static void main(String[] args )
