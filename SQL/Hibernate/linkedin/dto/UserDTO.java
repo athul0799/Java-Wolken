@@ -12,7 +12,7 @@ public class UserDTO {
 		private int Id;
 		private String Name;
 		private String email;
-		private long Password;
+		private String Password;
 		private String Designation;
 		private String dob;
 		
