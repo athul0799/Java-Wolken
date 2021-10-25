@@ -1,4 +1,4 @@
-package com.wolken.hackerrank.services;
+package com.wolken.linkedin.services;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
