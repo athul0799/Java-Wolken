@@ -9,7 +9,8 @@ import com.wolken.linkedin.dto.UserDTO;
 import com.wolken.linkedin.entity.LoginEntity;
 import com.wolken.linkedin.entity.UserEntity;
 
-public class RegistrationServiceImpl implements RegistrationService {
+public class RegistrationServiceImpl implements RegistrationService {                                                  
+ 
 public String validateAndSave(UserDTO dto) {
 		UserEntity entity=new UserEntity();
         if (dto !=null){
@@ -53,7 +54,7 @@ public String validateAndSave(UserDTO dto) {
         return dao.save(entity);
 	}
 	
-	public String loginValidation(LoginDTO dto) {
+	public String validateAndLogin(LoginDTO dto) {
 		RegistrationDAO dao = new RegistrationDAOImpl();
 		LoginEntity entity = dao.getByEmail(dto.getEmail());
 		if(entity!=null) {
@@ -73,7 +74,7 @@ public String validateAndSave(UserDTO dto) {
 		else
 			return "email or password invalid";
 	}
-public String UpdatePassword(UserDTO dto) {
+public String validateAndUpdatePassword(UserDTO dto) {
 		RegistrationDAO dao = new RegistrationDAOImpl();
 		UserEntity entity = new UserEntity();
 		String out = "";
