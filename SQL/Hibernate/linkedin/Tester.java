@@ -41,9 +41,47 @@ public class Tester {
 					RegistrationService service=new RegistrationServiceImpl();
 					service.validateAndSave(dto);
 				}
-				else {
-					break;
-				}
-	    	}
-	    }
+			
+			else if(ch == 2) {
+				sc.nextLine();
+				LoginDTO dto = new LoginDTO();
+				System.out.println("enter email");
+				String email = sc.nextLine();
+				System.out.println("enter password");
+				String password = sc.nextLine();
+				dto.setEmail(email);
+				dto.setPassword(password);
+				RegistrationService service=new RegistrationServiceImpl();
+				String login = service.loginValidation(dto);
+				if(login.contains("login successful"))
+					System.out.println(login);
+				else
+					System.err.println(login);
+			}
+			else if(ch == 3) {
+				sc.nextLine();
+				UserDTO dto = new UserDTO();
+				System.out.println("enter email");
+				String email = sc.nextLine();
+				System.out.println("enter new password");
+				String password = sc.nextLine();
+				System.out.println("confirm password");
+				String cnfPassword = sc.nextLine();
+				dto.setEmail(email);
+				dto.setPassword(password);
+				dto.setCnfPassword(cnfPassword);
+				RegistrationService service=new RegistrationServiceImpl();
+				String update = service.UpdatePassword(dto);
+				if(update.contains("Successful"))
+					System.out.println(update);
+				else
+					System.err.println(update);
+			}
+			else {
+				break;
+			}
+		}
+		sc.close();
+    }
 }
+			
