@@ -3,7 +3,7 @@ import org.hibernate.Transaction;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import com.wolken.hibernateUtils.util.HibernateUtils;
-import com.wolken.hpSupport.entity.UserEntity;
+import com.wolken.linkedin.entity.UserEntity;
 
 	public class RegistrationDAOImpl implements RegistrationDAO {
         @Override
@@ -13,13 +13,56 @@ import com.wolken.hpSupport.entity.UserEntity;
 			try {
 				factory=HibernateUtils.getInstance();
 				s=factory.openSession();
-				Transaction transaction=s.beginTransaction();
+				Transaction t=s.beginTransaction();
 				s.saveOrUpdate(entity);
-				transaction.commit();
+				t.commit();
 			}			
 			finally {
 				s.close();
 			}
 			return 0;
 		}
+		
+		
+		public LinkedinEntity getByEmail(String email) {
+		Session session = null;
+		SessionFactory factory;
+		LinkedinEntity entity= null;
+		try{
+		factory = HibernateUtils.getInstance();
+	    	session = factory.openSession();
+	    	Query query = session.getNamedQuery("getByEmail");
+	    	query.setParameter("email", email);
+	    	entity = (LoginEntity) query.uniqueResult();
 		}
+		finally {
+		  session.close();
+		}
+		return entity;
+	}
+		
+	public int updatePassword(UserEntity entity) {
+		SessionFactory factory=null;
+		Session session=null;
+		int r=0;
+		try {
+			factory=HibernateUtils.getInstance();
+			session=factory.openSession();
+			Transaction t=session.beginTransaction();
+			@SuppressWarnings("unchecked")
+			Query<HackerLoginEntity> query=session.createNamedQuery("updatePassword");
+			query.setParameter("updatePassword", entity.getPassword());
+			query.setParameter("email", entity.getEmail());
+			rows=query.executeUpdate();
+			t.commit();
+		}
+		
+		finally {
+			session.close();
+		}
+		return r;	
+		
+	}
+
+}
+
