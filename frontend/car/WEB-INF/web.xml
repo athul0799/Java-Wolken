@@ -1,0 +1,109 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Web Application</display-name>
+  
+  <servlet>
+	<servlet-name>Audi</servlet-name>
+  	<servlet-class>com.wolken.cars.AudiServlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Daimler AG</servlet-name>
+  	<servlet-class>com.wolken.cars.DaimlerServlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Ford</servlet-name>
+  	<servlet-class>com.wolken.cars.FordServlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Honda</servlet-name>
+  	<servlet-class>com.wolken.cars.HondaServlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Kia</servlet-name>
+  	<servlet-class>com.wolken.cars.Kia.servlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Lamborghini</servlet-name>
+  	<servlet-class>com.wolken.cars.Lamborghini.Servlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Lexus</servlet-name>
+  	<servlet-class>com.wolken.cars.Lexus</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Mercedes</servlet-name>
+  	<servlet-class>com.wolken.cars.MercedesServlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Tesla</servlet-name>
+  	<servlet-class>com.wolken.cars.TeslaServlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Volkswagen</servlet-name>
+  	<servlet-class>com.wolken.cars.VolkswagenServlet</servlet-class>
+</servlet>
+
+
+<servlet-mapping>
+	<servlet-name>Audi</servlet-name>
+	<url-pattern>/Audi</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Daimler</servlet-name>
+	<url-pattern>/Daimler</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Ford</servlet-name>
+	<url-pattern>/Ford</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Honda</servlet-name>
+	<url-pattern>/Honda</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Kia</servlet-name>
+	<url-pattern>/Kia</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Lamborghini</servlet-name>
+	<url-pattern>/Lamborghini</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Lexus</servlet-name>
+	<url-pattern>/Lexus</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Mercedes</servlet-name>
+	<url-pattern>/Mercedes</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Tesla</servlet-name>
+	<url-pattern>/Tesla</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Volkwagen</servlet-name>
+	<url-pattern>/Volkswagen</url-pattern>
+</servlet-mapping>
+
+</web-app>
