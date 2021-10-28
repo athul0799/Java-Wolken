@@ -15,7 +15,7 @@ public class MercedesServlet extends HttpServlet{
 		PrintWriter writer = resp.getWriter();
 		writer.println("<html>"
 				+ "<head>"
-				+ "<title>Tesla</title>"
+				+ "<title>Mercedes</title>"
 				+ "</head>"
 				+ "<body>" Mercedes-Benz, commonly referred to as Mercedes, is a German luxury automotive brand. Mercedes-Benz produces consumer luxury vehicles and commercial vehicles.
 				+ "</body>"
