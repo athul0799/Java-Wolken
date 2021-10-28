@@ -15,7 +15,7 @@ public class LamborghiniServlet extends HttpServlet{
 		PrintWriter writer = resp.getWriter();
 		writer.println("<html>"
 				+ "<head>"
-				+ "<title>Tesla</title>"
+				+ "<title>Lamborghini</title>"
 				+ "</head>"
 				+ "<body>"  The company is owned by the Volkswagen Group through its subsidiary Audi. It is an italian brand
 				+ "</body>"
