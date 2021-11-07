@@ -16,7 +16,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 		public String validateAndSave(UserDTO dto) {
 			
 			DAO dao = (DAOImpl) new ClassPathXmlApplicationContext(
-                    "lnikedin.xml").getBean("dao");
+                    "linkedin.xml").getBean("dao");
 				UserEntity entity=new UserEntity();
 		        if (dto !=null){
 		        	if(dto.getId()>0) {
