@@ -5,5 +5,5 @@ import com.wolken.linkedin.dto.UserDTO;
 public interface RegistrationService {
 String validateAndSave(UserDTO dto);
   String validateAndLogin(LoginDTO ldto);
-  String validateAndUpdatePassword(String email)
+  String validateAndUpdatePassword(String email);
 }
