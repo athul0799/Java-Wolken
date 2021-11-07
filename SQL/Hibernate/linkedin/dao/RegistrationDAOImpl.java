@@ -50,7 +50,7 @@ import com.wolken.linkedin.entity.UserEntity;
 			session=factory.openSession();
 			Transaction t=session.beginTransaction();
 			@SuppressWarnings("unchecked")
-			Query<HackerLoginEntity> query=session.createNamedQuery("updatePassword");
+			Query<LinkedinEntity> query=session.createNamedQuery("updatePassword");
 			query.setParameter("updatePassword", entity.getPassword());
 			query.setParameter("email", entity.getEmail());
 			rows=query.executeUpdate();
