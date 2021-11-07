@@ -28,7 +28,7 @@ public class DAOImpl {
 	}
 	
 	
-	public LinkedinEntity getByEmail(String email) {
+	public gmailEntity getByEmail(String email) {
 	Session session = null;
 	SessionFactory factory;
 	LinkedinEntity entity= null;
