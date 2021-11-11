@@ -19,7 +19,7 @@ public class FirstController {
 	RegistrationService service;
 
 
-	Logger logger = Logger.getLogger(getClass())
+	Logger logger = Logger.getLogger(this.getClass().getSimpleName());
 	
 	@RequestMapping("/save")
 	ModelAndView save(UserDTO dto) {
